@@ -1,0 +1,35 @@
+# Development files
+.git
+.gitignore
+.DS_Store
+*.log
+node_modules/
+
+# Test files
+test/
+tests/
+*.test.js
+*.test.mjs
+*.spec.js
+*.spec.mjs
+
+# Build files
+src/
+tsconfig.json
+rollup.config.js
+webpack.config.js
+
+# Documentation
+docs/
+examples/
+.github/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+Thumbs.db
+.DS_Store
