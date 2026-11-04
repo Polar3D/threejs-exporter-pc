@@ -148,6 +148,7 @@ interface PrintJobConfig {
   printableArea?: string[]; // Build plate area coordinates
   printerSettingsId?: string; // Printer profile identifier
   printSettingsId?: string; // Print settings identifier
+  placement?: { x: number; y: number }; // Bed position (mm) for the model's center; default is the bed center
 }
 ```
 

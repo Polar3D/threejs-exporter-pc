@@ -447,9 +447,14 @@ function calculateModelCenter(boundingBox) {
   };
 }
 function calculateCenteringTransform(modelCenter, boundingBox, printBed) {
+  // `placement` keeps the layout where the user put it on the plate: it is the
+  // bed position (mm) for the middle of the model. Without it, center on the bed.
+  const placement = printBed.placement;
+  const hasPlacement =
+    Number.isFinite(placement?.x) && Number.isFinite(placement?.y);
   const bedCenter = {
-    x: printBed.printableWidth / 2,
-    y: printBed.printableDepth / 2,
+    x: hasPlacement ? placement.x : printBed.printableWidth / 2,
+    y: hasPlacement ? placement.y : printBed.printableDepth / 2,
     z: 0,
     // 通常Z坐标为0，模型放在打印床表面
   };

@@ -9,6 +9,12 @@ export interface PrintJobConfig {
     printableArea?: string[];
     printerSettingsId?: string;
     printSettingsId?: string;
+    /**
+     * Bed position (mm, slicer coordinates) for the center of the model's
+     * bounding box. Use it to keep objects where they were placed on the plate.
+     * When left out, the model is centered on the bed.
+     */
+    placement?: { x: number; y: number };
 }
 
 export interface ExportResult {
