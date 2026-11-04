@@ -1,6 +1,6 @@
 {
   "name": "threejs-exporter-pc",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Enhanced Three.js 3MF exporter with multi-color support for Bambu Slicer",
   "main": "index.mjs",
   "type": "module",
